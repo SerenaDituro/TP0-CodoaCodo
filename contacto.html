@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+     <!-- CSS -->
+     <link rel="stylesheet" href="css/style.css" />
+     <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/5a4e8c8ecd.js" crossorigin="anonymous"></script>
+     <!-- Icono sitio web -->
+     <link rel="shortcut icon" href="img/logo/IDD-icono.png"/>
+     <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Send+Flowers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Bebas+Neue&family=Fjalla+One&family=Send+Flowers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-pag">
+        <nav>
+          <!-- Logo -->
+          <div class="header-logo"><a href="inicio.html"><img class="logo" src="img/logo/IDD-logo.png" alt="mi logo"></a></div>
+          <!-- Menú hamburguesa -->
+          <input type="checkbox" id="check"><label for="check" class="bar-btn"><i class="fas fa-bars"></i></label>
+          <!-- Menú -->
+          <ul class="nav-menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="inicio.html#nosotros">Nosotros</a></li>
+            <li>
+              <a href="inicio.html#servicios">Servicios</a>
+              <!-- Sub-menú -->
+              <ul>
+                <li><a href="educacion-dbt.html">Educación</a></li>
+                <li><a href="prevencion-dbt.html">Prevención</a></li>
+                <li><a href="atencion-medica-dbt.html">Atención médica</a></li>
+              </ul>
+           </li>
+           <li><a href="turnos.html">Turnos</a></li>
+           <li><a href="contacto.html">Contacto</a></li>
+         </ul>
+        </nav>
+    </header>
+    <main class="main-contacto"> 
+        <div class="ubicacion-contacto">
+            <img class="ubicacion" src="img/iconos/direccion-60.gif" alt="ubicacion"> 
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.571656560482!2d-60.94683928505278!3d-34.58970346426322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b8eb2f2e6da353%3A0x913919d315ac1192!2sPres.%20Quintana%20144%2C%20Jun%C3%ADn%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1649420633433!5m2!1ses-419!2sar" 
+            width="600" height="465" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>        
+        <form class="form-contacto" name='f1' action="destino.html">
+            <h1 class="titulo-contacto">CONTACTO<br>~</h1>
+            <input type="text" name="nombre" class="nombre" placeholder="Nombre *" autofocus required/>
+            <!-- required: campos obligatorios; autofocus: al cargar la pagina o refrescarla el cursor se para sobre este elemento-->
+            <br /><br />
+            <input type="text" name="apellido" class="apellido" placeholder="Apellido *" autofocus required/>
+            <br /><br />
+            <input type="email" name="email" class="email" placeholder="Email *" required/>
+            <br /><br />
+            <input type="asunto" name="asunto" class="asunto" placeholder="Asunto *" required/>
+            <br /><br />
+            <textarea name="mensaje" class="mensaje" cols="30" row="10" placeholder="Mensaje *" required></textarea>
+            <br /><br />
+            <input type="submit" class="boton_enviar" value="Enviar" />
+            <!-- alternativa: en vez de envíar los datos a otra pag, que aparezca un cartel diciendo "Datos envíados correctamente" -->
+        </form>
+    </main>
+    <footer> 
+        <nav class="footer-redes-sociales">
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=542364649340&text=Hola%2C%20c%C3%B3mo%20estas%3F%20Espero%20muy%20bien%2C%20soy%20Claudio%20Ditturo%2C%20%C2%BFen%20qu%C3%A9%20puedo%20ayudarle%3F%20%F0%9F%98%81" 
+                    target="_blank"><img src="img/iconos/whatsapp-24.png" alt="whatsapp"></a></li> 
+                <li><a href="https://www.instagram.com/diabetologiadituro" target="_blank"><img src="img/iconos/instagram-24.png" alt="instagram"></a></li>
+                <li><a href="https://m.facebook.com/Diabetolog%C3%ADa-Dituro-101722482206809" target="_blank"><img src="img/iconos/facebook-24.png" alt="facebook"></a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

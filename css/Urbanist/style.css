@@ -1,0 +1,351 @@
+@charset "utf-8";
+/*selector universal*/
+* {
+    /*box-sizig: indica cómo se debe calcular el ancho y el alto total de un elemento
+    ->border-box: las propiedades width y height incluyen al contenido, padding y borde
+    pero no al margin (para crear espacio alrededor de los elementos, fuera de los bordes definidos)*/
+    box-sizing: border-box; 
+}
+
+/*tipo de letra extraída de GoogleFont*/
+@font-face {
+    font-family: 'fuente';
+    src: url(Urbanist-VariableFont_wght.ttf);
+}
+
+html {
+    font-size: 1rem;
+    /*height: 100%;*/
+    display: flex;
+	width: 100%;
+    height: 100vh; /*para que sea responsive*/
+}
+
+body, header, main, footer {
+    /* border: 3px red solid; */
+    min-height: 50px;
+    margin: 0.5rem;
+    min-width: 400px;
+    width: 99%;
+}
+
+/*--------------------------------------------Encabezado--------------------------------------------*/
+header {
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%); /*le da cierta opacidad a la sombra*/
+}
+
+/* Logo */
+.header-logo {
+    /* width: auto; */
+    display: inline-block; /*para que el logo esté a la misma línea que el menu-bar*/
+    margin: 0.5rem; /*distancia entre el logo y elementos externos*/
+}
+
+/*Menú*/
+.header-menubar {
+    /* left: auto;  */
+    position: relative; /*posición relativa al elementos anterior (logo) */
+    /* top: auto;
+    width: auto;  */
+    display: inline-block; /*para que los elementos se coloquen en línea*/
+    /* margin: 0.5rem 0 0.5rem 1 rem;  */
+}
+
+.header-menubar ul {
+    /*se le quita la viñeta a los items de lista*/
+    list-style: none;
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+}
+
+.header-menubar li {
+    /*los items de lista se ponen uno al lado del otro, en la misma fila*/
+    float:left;
+    /* font-weight: 700; */
+    /* text-align: center; */
+    width: 130px;
+	height: 35px; 
+
+    /*espacio entre los items de lista*/
+    margin-left: 25px;
+}
+
+.header-menubar li a {
+    font-size: 1rem;
+    background: transparent; 
+}
+
+.header-menubar ul li:first-child
+{
+	margin-left: 50px; /*distancia entre el primer ítem de la lista y el logo*/
+} 
+
+.header-menubar ul li a
+{
+	text-decoration: none;
+	color: white;
+    background-color: #1c247c;
+	/* background-color: #0080C0; */
+	
+	/*para que <a> ocupe todo el area de <li> y generar de esa manera un boton*/
+	display: block;
+	
+	/*para que el texto de <a> quede centrado de manera vertical, 
+	aquí se escribe el mismo valor en pixeles que el height de <li>*/
+	line-height: 30px;
+	text-align: center;
+}
+
+.header-menubar ul li a:hover
+{
+	/* la pseudoclase a:hover permite que al pasar el mouse por encima del vinculo
+	 cambie el color de fondo del boton*/
+    background-color: rgb(130, 167, 236);
+}
+
+/* Sub menú */
+.header-menubar ul li ul
+{
+    /*oculta el submenu de forma predeterminada*/
+	display: none; 
+}
+
+.header-menubar ul li:hover ul
+{
+	/* cuando paso el mouse por encima de los li que tienen ul interno 
+    (submenu) con display:block hago que aparezca el menu interno dando 
+    la sensación que se despliega*/
+	display: block;
+}
+
+.header-menubar ul li ul li:first-child
+{
+	margin-left: -40px; /*distancia entre el primer ítem de la lista y el logo*/
+    border-top: solid 5px #3c4dca; 
+}
+
+.header-menubar ul li ul li
+{
+	margin-left: -40px;
+    width: 130px;
+	height: 35px;
+	border-top: solid 5px #3c4dca; 
+}
+
+.header-menubar ul li ul li a
+{
+	text-align: center;
+    background-color: #1c247c;
+}
+
+.cleaner /*corta la flotacion de los botones(etiquetas item de lista(li) de la lista ul)*/
+{
+	clear: both;
+}
+/*--------------------------------------------Parte principal--------------------------------------------*/
+main {
+    min-height: 200px;
+    overflow: auto; /*se adapta al contenido */
+    background-color: white;
+}
+
+/* como div es hijo directo del main, la regla se aplica de esta manera: 
+los div que son hijos directos del main van a tener este estilo.
+Para aplicar esta regla, el elemento tiene que estar dentro del main
+y tiene que ser hijo directo, si en el medio tengo un section no aplica*/
+main>div {
+    /* border: 2px blue solid; */
+    min-height: 100px;
+    margin: 0.5rem;
+    height: auto;
+    float: left; /*tira al div a la izquierda*/
+    width: 65%;
+}
+
+main>aside {
+    min-height: 100px;
+    min-width: 25%;
+    margin: 0.5rem;
+    float: left; /*si el ancho le da (no los encima), se tira a la izq*/
+    width: auto;
+}
+
+/* #gift-ppal {
+    width: 100%; en caso de que el gift sea grande
+} */
+
+.contenido-ppal {
+    /* El viewport es el ancho y alto de la pantalla del dispositivo
+    vw = ancho del viewport --> 25% del viewport del dispositivo(celu, tablet o monitor PC).
+	vh = altura del viewport.*/
+    width: 90vw;
+    height: 200vh;
+    box-sizing: border-box;
+
+	color: rgb(14, 24, 70);
+    /* rgb(21, 37, 107) */
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#titulo-inicio {
+	font-size: 3rem;
+    margin: 20px 250px 80px 250px;
+    width: 700px; 
+    height: 50px;
+}
+
+.seccion1 {
+    height: 400px;
+    margin: 50px 95px;
+    border-top: #1c247c 1px dotted;
+    border-bottom: #1c247c 1px dotted;
+}
+
+.cuadro{
+    font-size: 1.2rem;
+	width: 250px;
+	height: 300px;
+	background-color: #b7bdfa;
+	float: left;
+	padding: 110px 10px;
+	margin: 50px 45px;
+    border: #1c247c 1px dashed;
+    /* #7883fc */
+}
+
+/* usamos la pseudoclase :hover -> cuando paso el mouse por encima de
+esta caja, se agranda un 20 % en x e y (efecto rollover) */
+.cuadro:hover{
+	transform:scale(1.2,1.2);
+	-webkit-transform:scale(1.2,1.2);
+	-ms-transform:scale(1.2,1.2);
+}
+
+.img-cuadro {
+    float:inline-end;
+    align-items: center;
+    margin: 20px 50px 20px 50px;
+}
+
+/*--------------------------------------------Pie de página--------------------------------------------*/
+footer {
+    /* background-color: #111753; */
+    background-color: #adadad; /*#989899; */
+    height: 130px;
+    margin-top: 45px;
+}
+
+.footer-redes-sociales {
+    top: auto; 
+    width: auto;
+    display: flow-root; 
+    margin: 0.5rem 1rem; 
+} 
+
+.footer-redes-sociales ul {
+    list-style: none;
+}
+
+.footer-redes-sociales li {
+    float: right;
+    margin: 0 0.5rem;
+}
+
+/*-------------------------------------------------Aside-------------------------------------------------*/
+.gift-diabetes {
+    margin-left: 3rem;
+    margin-bottom: 0;
+}
+
+.whatsapp {
+    position:fixed;
+    bottom:40px;
+    right:40px;
+    z-index:100;
+    background-color: transparent;
+  }
+
+/*------------------------------------------------Contacto------------------------------------------------*/
+
+main {
+    margin: 50px;
+}
+
+#ubicacion { 
+    float: left;
+    margin-left: 0.5rem;
+}
+
+#mapa {
+    margin: 50px;
+    float:left;
+}
+
+ #titulo-contacto {
+	font-size: 3rem;
+	color: rgb(21, 37, 107);
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+form {
+    float: left;
+} 
+
+#nombre-apellido,#email,#asunto,#mensaje {
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    width: 350px;
+    height: 30px;
+    border: #1c247c 1.9px solid;
+}
+
+#mensaje {
+    height: 150px;
+    overflow:scroll;
+}
+
+#bonton_enviar {
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #1c247c;
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    border: #1c247c 2px solid;
+    margin-left: 100px;
+}
+
+#bonton_enviar:hover
+{
+    background-color: rgb(130, 167, 236);
+}
+
+/*------------------------------------------------Destino------------------------------------------------*/
+
+.p-destino {
+    font-size: 1.5rem;
+	color: rgb(21, 37, 107);
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    width: 700px;
+    height: 225px;
+    border: #1c247c 1px dotted;
+    background-color: #b7bdfa;
+    margin: 40px 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.volver-inicio {
+    color: white;
+    background-color: #1c247c;
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: #1c247c 5px solid;
+    margin-top: 40px;
+    margin-left: 580px;
+}
+
+.volver-inicio:hover {
+    background-color: #2833b1;
+}

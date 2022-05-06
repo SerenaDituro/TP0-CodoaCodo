@@ -1,0 +1,958 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Fuente de GoogleFont */
+@font-face {
+  font-family: 'fuente';
+  src: url(Urbanist/Urbanist-VariableFont_wght.ttf); 
+}
+
+html {
+	width: 100%; 
+  /* overflow-x: hidden; */
+}
+
+/*-----------------------------------------------------header-----------------------------------------------------------*/
+
+header {
+  box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%); 
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  height: 65px;
+}
+
+/* Nav-bar */
+
+/* Logo */
+.header-logo {
+  float: left;
+  margin: -0.5rem 2.5rem 0.2rem 0.2rem; 
+}
+
+/* Menú */
+.nav-menu {
+  list-style: none; 
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.nav-menu li {
+  float: left;
+  width: 120px;
+	height: 35px;  
+  margin: 5px 20px 15px 40px; 
+}
+
+.nav-menu li a {
+	text-decoration: none;
+	color: white;
+  background-color: #1c247c;
+	display: block; 
+	line-height: 35px;
+	text-align: center;
+  font-size: 1.1rem;
+}
+
+.nav-menu li a:hover {
+  background-color: rgb(130, 167, 236);
+}
+
+/* Sub menú */
+.nav-menu li ul {
+	display: none; 
+  list-style: none;
+}
+
+.nav-menu li:hover ul {
+	display: block;
+}
+
+.nav-menu li ul li {
+	margin: 0; 
+  width: 119.5px;
+	height: 35px;  
+	border-top: solid 3px #3c4dca; 
+}
+
+.nav-menu li ul li a {
+	text-align: center;
+  background-color: #1c247c;
+}
+
+/* Menú hamburguesa */
+.bar-btn {
+  display: none;
+  font-size: 25px;
+  color:#1c247c;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+/* Menú hamburguesa */
+@media (max-width: 1110px) {
+  /* and (min-width: 750px) */
+  .header-logo {
+    float: right;
+    margin: -0.8rem 40% 0.2rem 5%;
+  }
+
+  .bar-btn {
+    display: block;
+    /* float: right; */
+    margin: 20px 40px;
+  }
+
+  .nav-menu {
+    /* position: fixed; */
+    width: 20%; 
+    margin-left: 40px;
+    /* margin-left: 57.1%;  ¿Cómo hago para mantener la relación respecto al margen derecho? */
+    top: 45px;
+    height: 0vh;
+    width: 145px; 
+    background: rgb(28,36,124,0.95);
+    text-align: center;
+    transition: all .5s;
+
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .nav-menu li {
+    display: none;
+    margin: 0 0 5px 0;
+    padding: 5px;
+    transition: all .5s;
+    border-bottom: white 0.5px solid;
+    float: none;
+    width: auto;
+  }
+
+  .nav-menu li a {
+    background-color: transparent;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  .nav-menu li a:hover {  
+    background-color: transparent;
+    color: rgb(130, 167, 236);
+    transition: .3s;
+  }
+
+  .nav-menu li ul li {
+    /* margin: -96px 0 96px -162px; */
+    margin: -96px 0 96px 142px;
+    padding: 5px;
+    border: none;
+    width: 145px;
+    height: 40px;
+    background-color: rgb(28,36,124,0.95);
+    border-bottom: white 0.5px solid;
+    transition: all .5s;
+  }
+  
+  .nav-menu li ul li a {
+    background-color: transparent;
+    color: white;
+    font-size: 1.1rem;
+  } 
+  
+  .nav-menu li ul li a:hover {  
+    background-color: transparent;
+    color: rgb(130, 167, 236);
+    transition: .3s;
+  }
+
+  #check:checked ~ .nav-menu {
+    height: 250px;
+  }
+  
+  #check:checked ~ .nav-menu li {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  /*A menos de 750px cambia la ubicación del logo y del menú*/
+  .header-logo {
+    /* float: right; */
+    margin: -0.8rem 5% 0.2rem 0;
+  }
+
+  .bar-btn {
+    /* display: block; */
+    margin: 20px;
+  }
+
+  .nav-menu {
+    margin-left: 20px;
+    /* width: 20%; 
+    top: 45px;
+    height: 0vh;
+    width: 145px; 
+    background: rgb(28,36,124,0.95);
+    text-align: center;
+    transition: all .5s;
+
+    position: absolute;
+    z-index: 1; */
+  }
+  
+  /* .nav-menu li {
+    display: none;
+    margin: 0 0 5px 0;
+    padding: 5px;
+    transition: all .5s;
+    border-bottom: white 0.5px solid;
+    float: none;
+    width: auto;
+  }
+
+  .nav-menu li a {
+    background-color: transparent;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  .nav-menu li a:hover {  
+    background-color: transparent;
+    color: rgb(130, 167, 236);
+    transition: .3s;
+  }
+
+  .nav-menu li ul li {
+    margin: -96px 0 96px 142px;
+    padding: 5px;
+    border: none;
+    width: 145px;
+    height: 40px;
+    background-color: rgb(28,36,124,0.95);
+    border-bottom: white 0.5px solid;
+    transition: all .5s;
+  }
+  
+  .nav-menu li ul li a {
+    background-color: transparent;
+    color: white;
+    font-size: 1.1rem;
+  } 
+  
+  .nav-menu li ul li a:hover {  
+    background-color: transparent;
+    color: rgb(130, 167, 236);
+    transition: .3s;
+  }
+
+  #check {
+    display: none;
+  }
+  
+  #check:checked ~ .nav-menu {
+    height: 250px;
+  }
+  
+  #check:checked ~ .nav-menu li {
+    display: block;
+  } */
+}
+
+/*-------------------------------------------------------footer---------------------------------------------------------*/
+
+footer {
+  background-color: #adadad; 
+  height: 150px;
+}
+
+.footer-redes-sociales {
+  top: auto; 
+  width: auto;
+  display: flow-root; 
+  margin: 2rem;
+  padding-top: 15px;
+} 
+
+.footer-redes-sociales ul {
+  list-style: none;
+}
+
+.footer-redes-sociales li {
+  float: right;
+  margin: 0 0.5rem;
+}
+
+/*-----------------------------------------------------"inicio.html"-----------------------------------------------------*/
+
+.main-inicio {
+  width: 100%;
+  overflow: hiden;
+  color:  rgb(14, 24, 70); 
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+}
+
+.titulo-inicio {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: white;
+  width: 630px;
+  background-color: #1c247c; 
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.parallax-titulo {
+  width: 100%;
+  height: 95vh;
+  background-image: url('../img/fondos/inicio.jpg');
+  background-position: center;    
+  background-size: cover;         
+  background-repeat: no-repeat;   
+  background-attachment: fixed;   
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.seccion1 {
+  height: 390px;
+  margin: 5px 30px 5px 130px;
+}
+
+#img-cuadro-seccion1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px 0px;
+  color:#1c247c;
+}
+
+.cuadro-seccion1 {
+  width: 270px;
+  height: 350px;
+  margin: 20px 35px;
+  padding: 5px 10px;
+  border: #1c247c 0.1px dashed;
+  float: left;
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+}
+
+/*cuando paso el mouse por encima de esta caja, se agranda un 10 % en x e y (efecto rollover) */
+.cuadro-seccion1:hover {
+  transform:scale(1.05,1.05);
+  -webkit-transform:scale(1.05,1.05);
+  -ms-transform:scale(1.05,1.05);
+}
+
+.texto-inicio {
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+}
+
+.subtitulo {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.parallax-subtitulo{
+  width: 100%;
+  height: 25vh;
+  background-image: url('../img/fondos/fondo1.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.seccion2 {
+  height: 475px;
+  margin: 15px 40px;
+}
+
+.titulo-cuadro-seccion2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 10px 0 10px;
+  margin-left: -50px;
+}
+
+.cuadro-seccion2 {
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  width: 600px;
+  height: auto;
+  color: white;
+  /* background-color: white; */
+  /* border:#1c247c 1.5px dotted; */
+  float: left;
+  margin: 5px 80px 20px 20px;
+  padding-left: 40px;
+
+  background-image: url('../img/fondos/fondo2.jpg');
+  background-size: cover;
+  background-position: center;
+
+  /* transición */
+  -moz-transition:-moz-border-radius 1.5s;
+  -ms-transition:	-ms-border-radius 1.5s;
+  -o-transition:	-o-border-radius 1.5s;
+  -webkit-transition:-webkit-border-radius 1.5s;
+  transition: border-radius 1.7s;
+}
+
+/* se redondea el borde de la caja en un radio de 30px en una transicion de 1.5 seg.*/
+.cuadro-seccion2:hover{
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.video-seccion2 {
+  border: #999999 0.1px solid;
+  float: right;
+  margin-top: -150px;
+  margin-right: 50px; 
+}
+
+.seccion3 {
+  height: 250px;
+}
+
+.cuadro-preguntas-seccion3 {
+  width: 590px;
+  height: auto;
+  /* background-color: white;*/
+  border: #1c247c 1px dotted;
+  border-radius: 150px; 
+  float: left;
+  padding: 15px;
+  margin: 25px 70px;  
+  font-size: 1rem;
+  color:#1c247c;
+  list-style: none;
+  text-align: center;
+}
+
+.img-info-seccion3 {
+  margin: -5px 180px 5px 182px;
+}
+
+.cuadro-comunidad-seccion3 {
+  width: 460px;
+  height: auto;
+  background-color: rgb(127, 171, 253);
+  color: white;
+  float: left;
+  margin: 35px 20px;
+  border: #1c247c 1.5px dotted;
+
+  /*transición*/
+  -moz-transition: background-color 1.5s;
+  -ms-transition: background-color 1.5s;
+  -o-transition: background-color 1.5s;
+  -webkit-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+
+.cuadro-comunidad-seccion3:hover{
+  background-color: rgb(25, 43, 121);
+  border-color: white;
+  font-size: 20px;
+}
+
+.titulo-seccion3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 25px;
+}
+
+.texto-seccion3 {
+  font-size: 1.05rem;
+  padding: 0 10px 20px 30px;
+  list-style-type:circle;
+}
+
+/*-----------------------------------------------Bootstrap - Carrousel----------------------------------------------------*/
+.carousel-inner {
+  margin: 20px 5% 20px 5%;
+}
+
+.carousel-inner img {
+  width: 90%;
+}
+
+#img-tratamiento {
+  width: 45%;
+  float: left;
+}
+
+.carousel-indicators .active {
+  background-color: #1c247c;
+}
+
+.carousel-control-prev, .carousel-control-next {
+ height: 50px;
+ width: 5px;
+ margin-top: 245px;
+}
+
+.carousel-caption h3 {
+  width: 250px;
+  color: white;
+  background-color: #1c247c; 
+  border-radius: 20px;
+  padding: 8px;
+  margin-left: 30%;
+  font-size: 1.3rem;
+}
+
+.carousel-caption h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-caption h3 a:hover {
+  text-decoration: none;
+  color: rgb(130, 167, 236);
+}
+
+/*Media query "inicio.html"*/
+
+@media (max-width: 1300px) and  (min-width: 1265px) {
+  .video-seccion2 {
+    margin-top: -520px;
+    margin-left: 10px; 
+  }
+
+  .cuadro-comunidad-seccion3 {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1265px) {
+
+  .seccion1 {
+    margin-left: 70px;
+  }
+
+  .video-seccion2 {
+    float: left;
+    margin: 30px 30px 30px 100px; 
+  }
+
+  .cuadro-comunidad-seccion3 {
+    margin: -5px 30px 35px 140px;
+  }
+
+  .carousel-caption h3 {
+    margin-left: 25%;
+  }
+
+  footer {
+    margin-top: 260px;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  .seccion1 {
+    margin-left: 170px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-inicio {
+    overflow: auto;
+    margin-bottom: -261px;
+  }
+
+  .carousel-caption h3 {
+    margin-left: 12%;
+  }
+}
+
+/*---------------------------------------------------"contacto.html"----------------------------------------------------*/
+
+.header-pag {
+  padding-top: 16px;
+  height: auto;
+}
+
+.main-contacto {
+  display: flex;
+  overflow: auto;
+  margin-bottom: -30px;
+  /* flex-direction: row;  */
+}
+
+.ubicacion { 
+  float: left;
+  margin: 90px 10px 10px 40px;
+}
+
+.mapa {
+  float: left;
+  margin: 175px 100px 20px -30px;
+}
+
+.titulo-contacto {
+  font-size: 2.5rem;
+  color: rgb(21, 37, 107);
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 90px 15px 20px 10px;
+}
+
+.form-contacto {
+  float: left;
+  margin: 15px 60px 40px 20px;
+} 
+
+.nombre,.apellido,.email,.asunto,.mensaje {
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+  width: 400px;
+  height: 30px;
+  border: #1c247c 1.9px solid;
+}
+
+.mensaje {
+  height: 150px;
+  overflow: scroll;
+}
+
+.boton_enviar {
+  width: 110px;
+  height: 35px;
+  color: white;
+  background-color: #1c247c;
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  border: #1c247c 1px solid;
+  margin-top: 10px;
+  margin-left: 140px;
+}
+
+.boton_enviar:hover
+{
+  background-color: rgb(130, 167, 236);
+}
+
+@media (max-width: 1265px) {
+  .main-contacto {
+    margin-bottom: -261px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .mapa {
+    margin: 15px 100px 20px 80px;
+  }
+}
+@media (max-width: 1110px) {
+  .header-pag {
+    padding-top: 0px;
+  }
+}
+
+/*-----------------------------------------------------"destino.html"---------------------------------------------------*/
+
+.main-destino {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+}
+
+.cuadro-destino {
+  font-size: 1.3rem;
+  color: rgb(21, 37, 107);
+  width: 450px;
+  border: #1c247c 1px solid;
+  text-align: center;
+  padding: 30px;
+  margin: 40px;
+}
+
+.volver-inicio {
+  background-color: #1c247c;
+  font-size: 1.1rem;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  margin-left: -10px;
+}
+
+.volver-inicio a {
+  text-decoration: none;
+  color: white;
+  line-height: 40px;
+  display: block;
+}
+
+.volver-inicio a:hover{
+  background-color: rgb(130, 167, 236);
+}
+
+/*--------------------------"prevencion-dbt.html","atencion-medica-dbt.html" y "turnos.html"-----------------------------*/
+
+.pagina-en-proceso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72.3vh;
+}
+
+.contenido-pag-en-proceso {
+  font-size: 1.1rem;
+  color: rgb(21, 37, 107);
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+}
+
+.rotate {
+  margin-left: 100px;
+  margin-top: 10px;
+  animation: rotation 3s infinite linear;
+
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media (max-width: 1265px) {
+  .pagina-en-proceso {
+    height: 36.2vh;
+  }
+
+  .contenido-pag-en-proceso {
+    margin-top: 235px;
+  }
+}
+
+/*----------------------------------------------"educacion-dbt.html"--------------------------------------------------*/
+.main-educacion-dbt {
+  width: 100%;
+  overflow: hidden; 
+  font-family: 'fuente', Arial, Helvetica, sans-serif; 
+  margin-bottom: -15px;
+}
+
+.parallax-ed {
+  width: 100%;
+  height: 45vh;
+  background-image: url('../img/fondos/fondo1.jpg');
+  background-position: center;    
+  background-size: cover;         
+  background-repeat: no-repeat;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-ed {
+  font-size: 3rem;
+  color: white;
+  padding: 100px 0 35px 0; 
+}
+
+.container-izquierdo {
+  width: 24%;
+  float: left;
+  margin-top: 10px;
+}
+
+.container-pregunta {
+  float: left;
+  width: 50%;
+  margin-left: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pregunta {
+  width: 600px;
+  color: #1c247c;
+  background-color: white;
+  box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%); 
+  border-radius: 20px;
+  margin: 15px 0;
+  padding: 20px 15px 10px 15px;
+  text-align: justify;
+
+  /*transición*/
+  -moz-transition: background-color 1.5s;
+  -ms-transition: background-color 1.5s;
+  -o-transition: background-color 1.5s;
+  -webkit-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+  
+.pregunta:hover{
+  background-color: #1c247c;
+  color: white;
+  border: white 3px solid;
+}
+
+details[open] {
+  color: #1c247c;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  margin: -10px -5px 0 -5px;
+}
+
+.titulo-preg {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.texto-preg {
+  text-align: justify;
+}
+
+.pilares {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+/* summary::-webkit-details-marker {
+  display: none;
+  color:#adadad;
+  background-color:#adadad;
+  font-size: 0.1rem;
+} */
+
+.container-preg {
+  width: 300px;
+  margin: 15px 110px 5px 180px;
+  background-color: #1c247c;
+  border: white 1px dashed;
+  color: white;
+}
+
+.titulo-valores-glucemia {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.lista-valores-glucemia {
+  margin-left: 40px;
+  padding-bottom: 8px;
+}
+
+.lista-pilares {
+  list-style: none;
+  padding: 10px 0px 10px 45px;
+}
+
+.sublista-pilares {
+  font-size: 0.9rem;
+  list-style-type: disc;
+  margin-left: 45px;
+}
+
+.texto-final-pilares {
+  text-align: center; 
+  font-weight: 600; 
+  font-size: 1.05rem; 
+  padding: 10px 0 5px 0;
+}
+
+.container-derecho {
+  width: 24%;
+  float: right;
+  margin-top: 10px;
+}
+
+.img-ed {
+  width: 325px;
+  height: 250px;
+  padding: 13px 0;
+}
+
+/*Media Query en "educacion-dbt.html"*/
+@media (max-width: 1350px) {
+
+  .main-educacion-dbt {
+    margin-bottom: -240px;
+  }
+
+  .container-izquierdo, .container-derecho {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-ed {
+    padding: 5px 15px 5px 35px;
+  }
+  
+  .container-pregunta {
+    width: 100%;
+    float: left;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .titulo-ed {
+    font-size: 2.5rem;
+  }
+
+  .container-izquierdo,.container-derecho {
+    margin-left: 10px;
+  }
+
+  .container-pregunta {
+    margin-left: 5px;
+  }
+
+  .img-ed {
+    width: 225px;
+    height: 150px;
+    padding: 5px;
+  }
+
+  .pregunta {
+    width: 450px;
+  }
+
+  .container-preg {
+    margin-left: 110px;
+  }
+}
+
+@media (max-width: 570px) {
+  .main-educacion-dbt {
+    overflow: auto;
+  }
+}
