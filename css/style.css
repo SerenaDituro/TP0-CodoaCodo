@@ -306,37 +306,37 @@ footer {
 
 /* Breakpoints responsive: Footer */
 
-@media screen and (max-width: 1155px) {
+@media screen and (max-width: 1150px) {
+  .brand{
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 971px) {
   .footer-content{
     justify-content: center;
   }
 
   .contact-us{
     text-align: center;
-    width: 80%;
+    width: 95%;
   }
 
   .full-part-footer {
-    display: flex;
     flex-direction: column;
-  }
-
-  .partFooter {
-    width: 60%;
-    margin-bottom: 15px;
-  }
-}
-
-@media screen and (max-width:500px) {
-  .contact-us{
-    width: 95%;
+    margin: 20px 0 -15px 0;
   }
 
   .partFooter {
     width: 95%;
     margin-bottom: 15px;
   }
+
+  .social-media i {
+    margin-top: 10px;
+  }
 }
+
 
 /*----------------------------------------------------- inicio.html ----------------------------------------------------*/
 
