@@ -851,12 +851,6 @@ footer {
   margin: 15px 0;
   padding: 20px 15px 10px 15px;
   text-align: justify;
-
-  -moz-transition: background-color 1.5s;
-  -ms-transition: background-color 1.5s;
-  -o-transition: background-color 1.5s;
-  -webkit-transition: background-color 1.5s;
-  transition: background-color 1.5s;
 }
   
 .pregunta:hover{
@@ -884,6 +878,18 @@ details[open] {
   text-align: justify;
 }
 
+.tabla-valores-glucemia {
+  width: 450px;
+  margin: 20px 70px 5px 70px;
+  text-align: center;
+  color:#1c247c;
+  border:#1c247c 1px solid;
+}
+
+.fila-th {
+  width: 200px;
+}
+
 .pilares {
   list-style-type: decimal;
   margin-left: 20px;
@@ -893,20 +899,8 @@ details[open] {
   width: 300px;
   margin: 15px 120px 5px 150px;
   background-color: #1c247c;
-  border: white 1px dashed;
   color: white;
-}
-
-/*hacer una tabla en vez de un cuadro!*/
-
-.titulo-valores-glucemia {
-  text-align: center;
-  padding: 8px 0;
-}
-
-.lista-valores-glucemia {
-  margin-left: 40px;
-  padding-bottom: 8px;
+  border:white 1px dashed;
 }
 
 .lista-pilares {
@@ -991,6 +985,10 @@ details[open] {
 
   .container-preg {
     margin-left: 110px;
+  }
+
+  .tabla-valores-glucemia {
+    margin-left: 0;
   }
 }
 
