@@ -4,7 +4,6 @@
     margin: 0;
 }
 
-/* Fuente de GoogleFont */
 @font-face {
   font-family: 'fuente';
   src: url(Urbanist/Urbanist-VariableFont_wght.ttf); 
@@ -12,10 +11,10 @@
 
 html {
 	width: 100%; 
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
-/*-----------------------------------------------------header-----------------------------------------------------------*/
+/*---------------------------------------------------- Header ----------------------------------------------------------*/
 
 header {
   box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%); 
@@ -24,8 +23,6 @@ header {
   position: fixed;
   height: 65px;
 }
-
-/* Nav-bar */
 
 /* Logo */
 .header-logo {
@@ -94,9 +91,8 @@ header {
   display: none;
 }
 
-/* Menú hamburguesa */
-@media (max-width: 1110px) {
-  /* and (min-width: 750px) */
+/* Breakpoints responsive: Header */
+@media screen and (max-width: 1110px) {
   .header-logo {
     float: right;
     margin: -0.8rem 40% 0.2rem 5%;
@@ -104,15 +100,12 @@ header {
 
   .bar-btn {
     display: block;
-    /* float: right; */
     margin: 20px 40px;
   }
 
   .nav-menu {
-    /* position: fixed; */
     width: 20%; 
     margin-left: 40px;
-    /* margin-left: 57.1%;  ¿Cómo hago para mantener la relación respecto al margen derecho? */
     top: 45px;
     height: 0vh;
     width: 145px; 
@@ -147,7 +140,6 @@ header {
   }
 
   .nav-menu li ul li {
-    /* margin: -96px 0 96px -162px; */
     margin: -96px 0 96px 142px;
     padding: 5px;
     border: none;
@@ -179,92 +171,23 @@ header {
   }
 }
 
-@media (max-width: 750px) {
-  /*A menos de 750px cambia la ubicación del logo y del menú*/
+@media screen and (max-width: 750px) {
   .header-logo {
-    /* float: right; */
     margin: -0.8rem 5% 0.2rem 0;
   }
 
   .bar-btn {
-    /* display: block; */
     margin: 20px;
   }
 
   .nav-menu {
     margin-left: 20px;
-    /* width: 20%; 
-    top: 45px;
-    height: 0vh;
-    width: 145px; 
-    background: rgb(28,36,124,0.95);
-    text-align: center;
-    transition: all .5s;
-
-    position: absolute;
-    z-index: 1; */
   }
-  
-  /* .nav-menu li {
-    display: none;
-    margin: 0 0 5px 0;
-    padding: 5px;
-    transition: all .5s;
-    border-bottom: white 0.5px solid;
-    float: none;
-    width: auto;
-  }
-
-  .nav-menu li a {
-    background-color: transparent;
-    color: white;
-    font-size: 1.1rem;
-  }
-  
-  .nav-menu li a:hover {  
-    background-color: transparent;
-    color: rgb(130, 167, 236);
-    transition: .3s;
-  }
-
-  .nav-menu li ul li {
-    margin: -96px 0 96px 142px;
-    padding: 5px;
-    border: none;
-    width: 145px;
-    height: 40px;
-    background-color: rgb(28,36,124,0.95);
-    border-bottom: white 0.5px solid;
-    transition: all .5s;
-  }
-  
-  .nav-menu li ul li a {
-    background-color: transparent;
-    color: white;
-    font-size: 1.1rem;
-  } 
-  
-  .nav-menu li ul li a:hover {  
-    background-color: transparent;
-    color: rgb(130, 167, 236);
-    transition: .3s;
-  }
-
-  #check {
-    display: none;
-  }
-  
-  #check:checked ~ .nav-menu {
-    height: 250px;
-  }
-  
-  #check:checked ~ .nav-menu li {
-    display: block;
-  } */
 }
 
-/*-------------------------------------------------------footer---------------------------------------------------------*/
+/*------------------------------------------------------ Footer --------------------------------------------------------*/
 
+/*
 footer {
   background-color: #adadad; 
   height: 150px;
@@ -285,9 +208,137 @@ footer {
 .footer-redes-sociales li {
   float: right;
   margin: 0 0.5rem;
+} */
+
+footer {
+  width: 100%;
+  background: #dadada;
+  /* background: #f2f2f2; */
+  margin-top: 30px;
+  padding: 30px 0;
+  font-family: 'fuente', Arial, Helvetica, sans-serif;
+  color:#1c247c;
 }
 
-/*-----------------------------------------------------"inicio.html"-----------------------------------------------------*/
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-us {
+  width: 40%;
+  text-align: center;
+}
+
+.brand{
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.full-part-footer {
+  width: 75%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partFooter {
+  width: 25%;
+  text-align: center;
+  float: left;
+}
+
+.partFooter h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.partFooter a {
+  display: block;
+  text-decoration: none;
+  color:#1c247c;
+  transition: color .3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.partFooter a:hover {
+  color:rgb(127, 171, 253);
+}
+
+.social-media i {
+  font-size: 20px;
+  display: inline-block;
+  /* color: #adb6c7;
+  border: 1px solid #adb6c7; */
+  color: #888f9c;
+  border: 1px solid #888f9c;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  line-height: 36px;
+  cursor: pointer;
+  margin: 30px 0;
+  text-align: center;
+  transition: all ease-in-out .3s;
+  margin-right: 5px;
+}
+
+.social-media i:hover {
+  color: #fff;
+  background-color:rgb(127, 171, 253);;
+  border-color: rgb(127, 171, 253);
+}
+
+.line{
+  height: 2px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  background: #f2f2f2;
+  /* background: #fff;  */
+}
+
+/* Breakpoints responsive: Footer */
+
+@media screen and (max-width: 1155px) {
+  .footer-content{
+    justify-content: center;
+  }
+
+  .contact-us{
+    text-align: center;
+    width: 80%;
+  }
+
+  .full-part-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partFooter {
+    width: 60%;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .contact-us{
+    width: 95%;
+  }
+
+  .partFooter {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+}
+
+/*----------------------------------------------------- inicio.html ----------------------------------------------------*/
 
 .main-inicio {
   width: 100%;
@@ -345,7 +396,6 @@ footer {
   text-align: center;
 }
 
-/*cuando paso el mouse por encima de esta caja, se agranda un 10 % en x e y (efecto rollover) */
 .cuadro-seccion1:hover {
   transform:scale(1.05,1.05);
   -webkit-transform:scale(1.05,1.05);
@@ -394,8 +444,6 @@ footer {
   width: 600px;
   height: auto;
   color: white;
-  /* background-color: white; */
-  /* border:#1c247c 1.5px dotted; */
   float: left;
   margin: 5px 80px 20px 20px;
   padding-left: 40px;
@@ -404,7 +452,6 @@ footer {
   background-size: cover;
   background-position: center;
 
-  /* transición */
   -moz-transition:-moz-border-radius 1.5s;
   -ms-transition:	-ms-border-radius 1.5s;
   -o-transition:	-o-border-radius 1.5s;
@@ -412,7 +459,6 @@ footer {
   transition: border-radius 1.7s;
 }
 
-/* se redondea el borde de la caja en un radio de 30px en una transicion de 1.5 seg.*/
 .cuadro-seccion2:hover{
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -435,7 +481,6 @@ footer {
 .cuadro-preguntas-seccion3 {
   width: 590px;
   height: auto;
-  /* background-color: white;*/
   border: #1c247c 1px dotted;
   border-radius: 150px; 
   float: left;
@@ -460,7 +505,6 @@ footer {
   margin: 35px 20px;
   border: #1c247c 1.5px dotted;
 
-  /*transición*/
   -moz-transition: background-color 1.5s;
   -ms-transition: background-color 1.5s;
   -o-transition: background-color 1.5s;
@@ -486,7 +530,8 @@ footer {
   list-style-type:circle;
 }
 
-/*-----------------------------------------------Bootstrap - Carrousel----------------------------------------------------*/
+/*---------------------------------------------- Bootstrap - Carrousel ---------------------------------------------------*/
+
 .carousel-inner {
   margin: 20px 5% 20px 5%;
 }
@@ -505,9 +550,9 @@ footer {
 }
 
 .carousel-control-prev, .carousel-control-next {
- height: 50px;
- width: 5px;
- margin-top: 245px;
+  height: 50px;
+  width: 5px;
+  margin-top: 245px;
 }
 
 .carousel-caption h3 {
@@ -530,9 +575,9 @@ footer {
   color: rgb(130, 167, 236);
 }
 
-/*Media query "inicio.html"*/
+/* Breakpoints responsive: inicio.html */
 
-@media (max-width: 1300px) and  (min-width: 1265px) {
+@media screen and (max-width: 1300px) and (min-width: 1265px) {
   .video-seccion2 {
     margin-top: -520px;
     margin-left: 10px; 
@@ -543,8 +588,7 @@ footer {
   }
 }
 
-@media (max-width: 1265px) {
-
+@media screen and (max-width: 1265px) {
   .seccion1 {
     margin-left: 70px;
   }
@@ -567,13 +611,13 @@ footer {
   }
 }
 
-@media (max-width: 800px) and (min-width: 600px) {
+@media screen and (max-width: 800px) and (min-width: 600px) {
   .seccion1 {
     margin-left: 170px;
   }
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .main-inicio {
     overflow: auto;
     margin-bottom: -261px;
@@ -584,7 +628,7 @@ footer {
   }
 }
 
-/*---------------------------------------------------"contacto.html"----------------------------------------------------*/
+/*--------------------------------------------------- contacto.html ----------------------------------------------------*/
 
 .header-pag {
   padding-top: 16px;
@@ -595,7 +639,6 @@ footer {
   display: flex;
   overflow: auto;
   margin-bottom: -30px;
-  /* flex-direction: row;  */
 }
 
 .ubicacion { 
@@ -650,24 +693,26 @@ footer {
   background-color: rgb(130, 167, 236);
 }
 
-@media (max-width: 1265px) {
+/* Breakpoints responsive: contacto.html */
+
+@media screen and (max-width: 1265px) {
   .main-contacto {
     margin-bottom: -261px;
   }
 }
 
-@media (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .mapa {
     margin: 15px 100px 20px 80px;
   }
 }
-@media (max-width: 1110px) {
+@media screen and (max-width: 1110px) {
   .header-pag {
     padding-top: 0px;
   }
 }
 
-/*-----------------------------------------------------"destino.html"---------------------------------------------------*/
+/*----------------------------------------------------- destino.html ---------------------------------------------------*/
 
 .main-destino {
   display: flex;
@@ -708,13 +753,13 @@ footer {
   background-color: rgb(130, 167, 236);
 }
 
-/*--------------------------"prevencion-dbt.html","atencion-medica-dbt.html" y "turnos.html"-----------------------------*/
+/*-------------------------- prevencion-dbt.html, atencion-medica-dbt.html y turnos.html ------------------------------*/
 
 .pagina-en-proceso {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 72.3vh;
+  height: 100vh;
 }
 
 .contenido-pag-en-proceso {
@@ -741,7 +786,9 @@ footer {
   }
 }
 
-@media (max-width: 1265px) {
+/* Breakpoints responsive: prevencion-dbt.html, atencion-medica-dbt.html y turnos.html */
+
+@media screen and (max-width: 1265px) {
   .pagina-en-proceso {
     height: 36.2vh;
   }
@@ -751,7 +798,8 @@ footer {
   }
 }
 
-/*----------------------------------------------"educacion-dbt.html"--------------------------------------------------*/
+/*---------------------------------------------- educacion-dbt.html --------------------------------------------------*/
+
 .main-educacion-dbt {
   width: 100%;
   overflow: hidden; 
@@ -804,7 +852,6 @@ footer {
   padding: 20px 15px 10px 15px;
   text-align: justify;
 
-  /*transición*/
   -moz-transition: background-color 1.5s;
   -ms-transition: background-color 1.5s;
   -o-transition: background-color 1.5s;
@@ -842,20 +889,15 @@ details[open] {
   margin-left: 20px;
 }
 
-/* summary::-webkit-details-marker {
-  display: none;
-  color:#adadad;
-  background-color:#adadad;
-  font-size: 0.1rem;
-} */
-
 .container-preg {
   width: 300px;
-  margin: 15px 110px 5px 180px;
+  margin: 15px 120px 5px 150px;
   background-color: #1c247c;
   border: white 1px dashed;
   color: white;
 }
+
+/*hacer una tabla en vez de un cuadro!*/
 
 .titulo-valores-glucemia {
   text-align: center;
@@ -897,8 +939,9 @@ details[open] {
   padding: 13px 0;
 }
 
-/*Media Query en "educacion-dbt.html"*/
-@media (max-width: 1350px) {
+/* Breakpoints responsive: educacion-dbt.html */
+
+@media screen and (max-width: 1350px) {
 
   .main-educacion-dbt {
     margin-bottom: -240px;
@@ -922,7 +965,7 @@ details[open] {
   }
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
 
   .titulo-ed {
     font-size: 2.5rem;
@@ -951,7 +994,7 @@ details[open] {
   }
 }
 
-@media (max-width: 570px) {
+@media screen and (max-width: 570px) {
   .main-educacion-dbt {
     overflow: auto;
   }
