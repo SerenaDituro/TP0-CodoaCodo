@@ -854,9 +854,15 @@ footer {
 }
   
 .pregunta:hover{
-  background-color: #1c247c;
+  background-color:rgb(39, 63, 170);
   color: white;
   border: white 3px solid;
+
+  -moz-transition: background-color 2s;
+  -ms-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
 }
 
 details[open] {
