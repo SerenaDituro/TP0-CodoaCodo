@@ -187,29 +187,6 @@ header {
 
 /*------------------------------------------------------ Footer --------------------------------------------------------*/
 
-/*
-footer {
-  background-color: #adadad; 
-  height: 150px;
-}
-
-.footer-redes-sociales {
-  top: auto; 
-  width: auto;
-  display: flow-root; 
-  margin: 2rem;
-  padding-top: 15px;
-} 
-
-.footer-redes-sociales ul {
-  list-style: none;
-}
-
-.footer-redes-sociales li {
-  float: right;
-  margin: 0 0.5rem;
-} */
-
 footer {
   width: 100%;
   background: #dadada;
@@ -397,6 +374,7 @@ footer {
 }
 
 .cuadro-seccion1:hover {
+  /* Transformación: escalado */
   transform:scale(1.05,1.05);
   -webkit-transform:scale(1.05,1.05);
   -ms-transform:scale(1.05,1.05);
@@ -452,6 +430,7 @@ footer {
   background-size: cover;
   background-position: center;
 
+  /*Transición: border-radius*/
   -moz-transition:-moz-border-radius 1.5s;
   -ms-transition:	-ms-border-radius 1.5s;
   -o-transition:	-o-border-radius 1.5s;
@@ -505,6 +484,7 @@ footer {
   margin: 35px 20px;
   border: #1c247c 1.5px dotted;
 
+  /* Transición: cambio de color */
   -moz-transition: background-color 1.5s;
   -ms-transition: background-color 1.5s;
   -o-transition: background-color 1.5s;
@@ -735,7 +715,7 @@ footer {
 
 .volver-inicio {
   background-color: #1c247c;
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 150px;
   height: 40px;
   text-align: center;
@@ -777,6 +757,7 @@ footer {
   z-index: -1;
 }
 
+/* Transformación: rotación */
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -857,6 +838,7 @@ footer {
   color: white;
   border: white 3px solid;
 
+  /* Transición: cambio de color*/
   -moz-transition: background-color 2s;
   -ms-transition: background-color 2s;
   -o-transition: background-color 2s;
