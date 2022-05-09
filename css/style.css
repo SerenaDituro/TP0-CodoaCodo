@@ -20,8 +20,10 @@ header {
   box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%); 
   background-color: white;
   width: 100%;
-  position: fixed;
   height: 65px;
+  position: fixed;
+  z-index: 100;
+  transition: ease-in-out 0.5s;
 }
 
 /* Logo */
@@ -114,7 +116,7 @@ header {
     transition: all .5s;
 
     position: absolute;
-    z-index: 1;
+    z-index: 100;
   }
   
   .nav-menu li {
@@ -255,15 +257,14 @@ footer {
   color: #888f9c;
   border: 1px solid #888f9c;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
   cursor: pointer;
   text-align: center;
   transition: all ease-in-out .3s;
-  margin: 2.5px 5px 2.5px 0;
-  /* display: inline-block;
-  margin: 30px 5px 30px 0; */
+  display: inline-block;
+  margin: 30px 5px 30px 0;
 }
 
 .social-media i:hover {
@@ -272,8 +273,8 @@ footer {
   border-color: rgb(127, 171, 253);
 }
 
-.link-sm {
-  margin-top: -10px;
+.social-media a {
+  display: inline-block;
 }
 
 .line {
@@ -282,7 +283,6 @@ footer {
   margin: auto;
   text-align: center;
   background: #f2f2f2;
-  /* background: #fff;  */
 }
 
 /* Breakpoints responsive: Footer */
@@ -291,10 +291,6 @@ footer {
   .brand{
     font-size: 22px;
   }
-
-  /* .social-media {
-    margin-left: 38px;
-  } */
 }
 
 @media screen and (max-width: 971px) {
@@ -317,9 +313,9 @@ footer {
     margin-bottom: 15px;
   }
 
-  /* .social-media {
-    margin-left: 110px;
-  } */
+  .social-media i {
+    margin-top: 10px;
+  }
 }
 
 /*----------------------------------------------------- inicio.html ----------------------------------------------------*/
@@ -342,6 +338,17 @@ footer {
   margin-top: 75px;
   text-align: center;
 }
+
+/* animation: ease-in animat 1s;
+@keyframes animat {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+} */
 
 .parallax-titulo {
   width: 100%;
@@ -778,7 +785,7 @@ footer {
 
 @media screen and (max-width: 1265px) {
   .pagina-en-proceso {
-    height: 36.2vh;
+    height: 63.5vh;
   }
 
   .contenido-pag-en-proceso {

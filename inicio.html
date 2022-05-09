@@ -23,6 +23,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
 <body>
@@ -58,7 +60,7 @@
       <h1 class="titulo-inicio">Instituto de Diabetología Dituro</h1>
     </section>
 
-    <section class="seccion1">
+    <section class="seccion1" data-aos="zoom-out-up">
       <article class="cuadro-seccion1">
         <i id="img-cuadro-seccion1" class="fa-solid fa-house-medical"></i><br>¿Quiénes somos?
         <p class="texto-inicio">Somos un instituto de diabetología destinado a mejorar la calidad de vida de las personas con diabetes, logrando que las mismas puedan empoderarse y aprender a convivir con la enfermedad.</p>
@@ -78,7 +80,7 @@
       <h2 class="subtitulo">~ NOSOTROS ~</h2>
     </section>
 
-    <section class="seccion2">
+    <section class="seccion2" data-aos="zoom-in-left">
       <div class="cuadro-seccion2">
         <p class="titulo-cuadro-seccion2">Director: Claudio Fabián Dituro</p>
         <ul>
@@ -105,7 +107,7 @@
           <li>Nefrólogo - Dr. Adrían Pierangelo.</li><br>          
         </ul>
       </div>
-      <video controls class="video-seccion2 alt="video-nosotros" width="450" height="380" poster="">
+      <video controls class="video-seccion2 alt="video-nosotros" width="450" height="380" poster="" data-aos="zoom-in-right">
         <source src="video/video-nosotros.mp4" type="video/mp4">
       </video>   
     </section> 
@@ -165,14 +167,14 @@
     </section>
 
     <section class="seccion3">
-      <div class="cuadro-preguntas-seccion3"><img class="img-info-seccion3" src="img/inicio/info4-80.gif" alt="info">
+      <div class="cuadro-preguntas-seccion3" data-aos="zoom-in-left"><img class="img-info-seccion3" src="img/inicio/info4-80.gif" alt="info">
         <li>¿Sabés qué es la diabetes?</li>
         <li>¿Te gustaría saber sobre los cuidados de la diabetes?</li>
         <li>¿Tenés factores de riesgo asociados a la diabetes?</li>
         <li>¿Tenés algún familiar (padres, hermanos, abuelos) con diabetes?</li>
         <li>¿Tenés diabetes y querés recibir asesoramiento sobre cómo tratarla?</li>
       </div>
-      <div class="cuadro-comunidad-seccion3">
+      <div class="cuadro-comunidad-seccion3" data-aos="zoom-in-right">
         <p class="titulo-seccion3">¡Te invitamos a formar parte de<br>NUESTRA COMUNIDAD!</p>
         <ul class="texto-seccion3">
           <li>Podes sacar <a href="turnos.html">turno</a> para realizar una consulta médica.</li>
@@ -213,5 +215,7 @@
     </div>
     <div class="line"></div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
