@@ -111,7 +111,7 @@ header {
 
   #bar-btn-inicio {
     display: block;
-    margin: 13px 20px;
+    margin: 13px 40px;
   }
 
   .nav-menu {
@@ -203,6 +203,10 @@ header {
 
   .bar-btn {
     margin: 20px;
+  }
+
+  #bar-btn-inicio {
+    margin: 13px 20px;
   }
 
   .nav-menu {
