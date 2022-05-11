@@ -20,14 +20,14 @@ window.addEventListener("scroll", function(){
 function validacion_al_enviar_datos() {
     /* Nombre */
     if (document.fcontacto.nombre.value.length == 0) {
-        alert("No ha escrito el nombre")
+        alert("Falta escribir el nombre")
         document.fcontacto.nombre.focus()
         return 0;
     }
 
     /* Apellido */
     if (document.fcontacto.apellido.value.length == 0) {
-        alert("No ha escrito el apellido")
+        alert("Falta escribir el apellido")
         document.fcontacto.apellido.focus()
         return 0;
     }
@@ -41,7 +41,7 @@ function validacion_al_enviar_datos() {
 
     /* Mensaje */
      if (document.fcontacto.mensaje.value.length == 0) {
-        alert("No ha escrito el mensaje")
+        alert("Falta escribir el mensaje")
         document.fcontacto.mensaje.focus()
         return 0;
     }
