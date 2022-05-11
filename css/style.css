@@ -680,7 +680,7 @@ footer {
   margin: 90px 15px 20px 10px;
 }
 
-.form-contacto {
+.fcontacto {
   float: left;
   margin: 15px 60px 40px 20px;
 } 
@@ -690,6 +690,13 @@ footer {
   width: 400px;
   height: 30px;
   border: #1c247c 1.9px solid;
+}
+
+.asunto {
+  width: 402.5px;
+  height: 32.5px;
+  margin-bottom: 2px;
+  color:#676d77;
 }
 
 .mensaje {
@@ -745,9 +752,8 @@ footer {
 }
 
 .cuadro-destino {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: rgb(21, 37, 107);
-  width: 450px;
   border: #1c247c 1px solid;
   text-align: center;
   padding: 30px;

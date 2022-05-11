@@ -16,8 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Send+Flowers&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Bebas+Neue&family=Fjalla+One&family=Send+Flowers&display=swap" rel="stylesheet">
-     <!-- JavaScript -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="header-pag">
@@ -50,21 +50,25 @@
             <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.571656560482!2d-60.94683928505278!3d-34.58970346426322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b8eb2f2e6da353%3A0x913919d315ac1192!2sPres.%20Quintana%20144%2C%20Jun%C3%ADn%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1649420633433!5m2!1ses-419!2sar" 
             width="600" height="465" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>        
-        <form class="form-contacto" name='f1' action="destino.html">
+        <form class="fcontacto" name='fcontacto' action="destino.html">
             <h1 class="titulo-contacto">CONTACTO<br>~</h1>
-            <input type="text" name="nombre" class="nombre" placeholder="Nombre *" autofocus required/>
-            <!-- required: campos obligatorios; autofocus: al cargar la pagina o refrescarla el cursor se para sobre este elemento-->
-            <br /><br />
-            <input type="text" name="apellido" class="apellido" placeholder="Apellido *" autofocus required/>
-            <br /><br />
-            <input type="email" name="email" class="email" placeholder="Email *" required/>
-            <br /><br />
-            <input type="asunto" name="asunto" class="asunto" placeholder="Asunto *" required/>
-            <br /><br />
-            <textarea name="mensaje" class="mensaje" cols="30" row="10" placeholder="Mensaje *" required></textarea>
-            <br /><br />
-            <input type="submit" class="boton_enviar" value="Enviar" />
-            <!-- alternativa: en vez de envíar los datos a otra pag, que aparezca un cartel diciendo "Datos envíados correctamente" -->
+            <input type="text" maxlength="100" name="nombre" class="nombre" placeholder=" Nombre *" autofocus required/>
+            <br/><br/>
+            <input type="text" maxlength="100" name="apellido" class="apellido" placeholder=" Apellido *" autofocus required/>
+            <br/><br/>
+            <input type="email" name="email" class="email" placeholder=" Email *" required/>
+            <br/><br/>
+            <select name="asunto" class="asunto">
+                <option value="Asunto">Asunto *</option>
+                <option value="Agradecimiento">Agradecimiento</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Reclamo">Reclamo</option>
+                <option value="Sugerencia">Sugerencia</option>
+            </select>
+            <br/><br/>
+            <textarea name="mensaje" class="mensaje" cols="30" row="10" placeholder=" Mensaje *" required></textarea>
+            <br/><br/>
+            <input type="submit" class="boton_enviar" value="Enviar" onclick="validacion_al_enviar_datos()"/> 
         </form>
     </main>
     

@@ -17,3 +17,32 @@ window.addEventListener("scroll", function(){
 })
 
 /* Validación de formulario */
+function validacion_al_enviar_datos() {
+    /* Nombre */
+    if (document.fcontacto.nombre.value.length == 0) {
+        alert("No ha escrito el nombre")
+        document.fcontacto.nombre.focus()
+        return 0;
+    }
+
+    /* Apellido */
+    if (document.fcontacto.apellido.value.length == 0) {
+        alert("No ha escrito el apellido")
+        document.fcontacto.apellido.focus()
+        return 0;
+    }
+
+    /* Asunto */
+    if (document.fcontacto.asunto.selectedIndex == 0) {
+        alert("Falta seleccionar el asunto del mensaje")
+        document.fcontacto.asunto.focus()
+        return 0;
+    }
+
+    /* Mensaje */
+     if (document.fcontacto.mensaje.value.length == 0) {
+        alert("No ha escrito el mensaje")
+        document.fcontacto.mensaje.focus()
+        return 0;
+    }
+}
