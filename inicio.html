@@ -23,8 +23,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- JavaScript -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
 <body>
@@ -175,7 +173,7 @@
         <li>¿Tenés algún familiar (padres, hermanos, abuelos) con diabetes?</li>
         <li>¿Tenés diabetes y querés recibir asesoramiento sobre cómo tratarla?</li>
       </div>
-      <div class="cuadro-comunidad-seccion3" data-aos="zoom-in-right">
+      <div class="cuadro-comunidad-seccion3" data-aos="zoom-in-right" onmouseover="cambiar_color(this);" onmouseout="volver_color(this);">
         <p class="titulo-seccion3">¡Te invitamos a formar parte de<br>NUESTRA COMUNIDAD!</p>
         <ul class="texto-seccion3">
           <li>Podes sacar <a href="turnos.html">turno</a> para realizar una consulta médica.</li>
@@ -216,6 +214,7 @@
     </div>
     <div class="line"></div>
   </footer>
+  <!-- JavaScript -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>

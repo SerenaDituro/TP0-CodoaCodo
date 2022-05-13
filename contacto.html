@@ -16,8 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Send+Flowers&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Bebas+Neue&family=Fjalla+One&family=Send+Flowers&display=swap" rel="stylesheet">
-    <!-- JavaScript -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="header-pag">
@@ -56,17 +54,17 @@
             <br/><br/>
             <input type="text" maxlength="100" name="apellido" class="apellido" placeholder=" Apellido *" autofocus required/>
             <br/><br/>
-            <input type="email" name="email" class="email" placeholder=" Email *" required/>
+            <input type="email" name="email" class="email" placeholder=" Email *" autofocus required/>
             <br/><br/>
             <select name="asunto" class="asunto">
-                <option value="Asunto">Asunto *</option>
+                <option value="Sin-asunto">Sin asunto</option>
                 <option value="Agradecimiento">Agradecimiento</option>
                 <option value="Consulta">Consulta</option>
                 <option value="Reclamo">Reclamo</option>
                 <option value="Sugerencia">Sugerencia</option>
             </select>
             <br/><br/>
-            <textarea name="mensaje" class="mensaje" cols="30" row="10" placeholder=" Mensaje *" required></textarea>
+            <textarea name="mensaje" class="mensaje" cols="30" row="10" placeholder=" Mensaje *" autofocus required></textarea>
             <br/><br/>
             <input type="submit" class="boton_enviar" value="Enviar" onclick="validacion_al_enviar_datos()"/> 
         </form>
@@ -103,6 +101,7 @@
         </div>
         <div class="line"></div>
     </footer>
+    <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>

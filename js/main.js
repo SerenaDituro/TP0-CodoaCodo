@@ -1,20 +1,28 @@
+/* Desplazamiento del header */
 let ubicacionPrincipal = window.pageYOffset; 
 
-    AOS.init();
+AOS.init();
 
-/*let numeroPixel = 2000;*/
 window.addEventListener("scroll", function(){
     let desplazamientoActual = window.pageYOffset; 
     if(ubicacionPrincipal >= desplazamientoActual){ 
         document.getElementsByTagName("header")[0].style.top = "0px"
     }else{
-        /* if(desplazamientoActual >= numeroPixel){
-            document.getElementsByTagName("header")[0].style.top = "-100px"
-        } */
         document.getElementsByTagName("header")[0].style.top = "-100px"
     }
     ubicacionPrincipal = desplazamientoActual; 
 })
+
+/* Transición: cambio de color */
+function cambiar_color (div) {
+	div.style.background = 'rgb(25, 43, 121)';
+    div.style.border = 'white 1.5px dotted';
+}
+
+function volver_color (div) {
+	div.style.background = '';
+    div.style.border = '';
+}
 
 /* Validación de formulario */
 function validacion_al_enviar_datos() {
@@ -32,12 +40,12 @@ function validacion_al_enviar_datos() {
         return 0;
     }
 
-    /* Asunto */
-    if (document.fcontacto.asunto.selectedIndex == 0) {
-        alert("Falta seleccionar el asunto del mensaje")
-        document.fcontacto.asunto.focus()
+    /* Email */   
+    if (document.fcontacto.email.value.length == 0) {
+        alert("Falta escribir el email")
+        document.fcontacto.email.focus()
         return 0;
-    }
+    }     
 
     /* Mensaje */
      if (document.fcontacto.mensaje.value.length == 0) {

@@ -524,19 +524,6 @@ footer {
   float: left;
   margin: 35px 20px;
   border: #1c247c 1.5px dotted;
-
-  /* Transición: cambio de color */
-  -moz-transition: background-color 1.5s;
-  -ms-transition: background-color 1.5s;
-  -o-transition: background-color 1.5s;
-  -webkit-transition: background-color 1.5s;
-  transition: background-color 1.5s;
-}
-
-.cuadro-comunidad-seccion3:hover{
-  background-color: rgb(25, 43, 121);
-  border-color: white;
-  font-size: 20px;
 }
 
 .titulo-seccion3 {
@@ -705,19 +692,18 @@ footer {
 }
 
 .boton_enviar {
-  width: 110px;
+  width: 100px;
   height: 35px;
   color: white;
   background-color: #1c247c;
   font-family: 'fuente', Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-  border: #1c247c 1px solid;
-  margin-top: 10px;
+  font-size: 1rem;
+  border: #1c247c 0.1px solid;
   margin-left: 140px;
 }
 
-.boton_enviar:hover
-{
+.boton_enviar:hover {
+  border: rgb(130, 167, 236) 0.1px solid;
   background-color: rgb(130, 167, 236);
 }
 
