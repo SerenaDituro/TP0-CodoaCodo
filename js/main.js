@@ -6,9 +6,10 @@ AOS.init();
 window.addEventListener("scroll", function(){
     let desplazamientoActual = window.pageYOffset; 
     if(ubicacionPrincipal >= desplazamientoActual){ 
-        document.getElementsByTagName("header")[0].style.top = "0px"
+        /* el header aparece y desaparece en todas las páginas, salvo en inicio.html */
+        document.getElementsByClassName("header-pag")[0].style.top = "0px"
     }else{
-        document.getElementsByTagName("header")[0].style.top = "-100px"
+        document.getElementsByClassName("header-pag")[0].style.top = "-100px"
     }
     ubicacionPrincipal = desplazamientoActual; 
 })
